@@ -8,7 +8,7 @@ spec:
   - name: tutorial
     type: uccm.ContainerSpec
     image: !format lyhsoft/tutorial:%version%
-    replicas: {{replicas}}
+    replicas: {{ replicas }}
     profile: production
     ports:
     - name: port
