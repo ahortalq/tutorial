@@ -48,6 +48,23 @@
                      </arguments>
                   </configuration>
                </execution>
+               <execution>
+                  <id>dar-xld</id>
+                  <phase>deploy</phase>
+                  <goals>
+                     <goal>exec</goal>
+                  </goals>
+                  <configuration>
+                     <executable>xl</executable>
+                     <arguments>
+                        <argument>apply</argument>
+                        <argument>-f</argument>
+                        <argument>deploy.yaml</argument>
+                        <argument>--values</argument>
+                        <argument>version=${project.version}</argument>
+                     </arguments>
+                  </configuration>
+               </execution>
             </executions>
          </plugin>
       </plugins>
