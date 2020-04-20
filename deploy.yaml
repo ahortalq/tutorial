@@ -10,7 +10,7 @@ spec:
   deployables:
   - name: container
     type: uccm.ContainerSpec
-    image: !format lyhsoft-registry:8084/tutorial:%version%
+    image: !format lyhsoft/tutorial:%version%
     replicas: "{{ replicas }}"
     profile: production
     ports:
