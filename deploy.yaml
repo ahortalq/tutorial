@@ -17,8 +17,6 @@ spec:
     env:
       connection-string: "{{ connection-string }}"
       user-bdd: "{{ user-bdd }}"
-    securedEnv:
-      password-bdd: "{{ password-bdd }}"
     ports:
     - name: port
       type: uccm.ContainerPortSpec
