@@ -5,7 +5,7 @@
 apiVersion: xl-deploy/v1
 kind: Applications
 spec:
-- name: !format Applications/tutorial-k8s/%version%
+- name: !format Applications/tutorials-k8s/%version%
   type: udm.DeploymentPackage
   satisfiesOkTestManager: true
   satisfiesOkReleaseManager: true
