@@ -7,8 +7,6 @@ kind: Applications
 spec:
 - name: !format Applications/tutorial-helm/%version%
   type: udm.DeploymentPackage
-  satisfiesOkTestManager: true
-  satisfiesOkReleaseManager: true
   deployables:
   - name: tutorial-helm
     type: helm.Chart
