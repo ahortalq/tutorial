@@ -13,7 +13,7 @@ spec:
   - name: chart
     type: helm.Chart
     chartName: helm-charts/tutorial
-    chartVersion: 1.0.0
+    chartVersion: 1.0.2
     inputVariables:
       hostAliases: "{{ hostAliases }}"
       appVersion: !value version
