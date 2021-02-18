@@ -5,22 +5,17 @@
 apiVersion: xl-deploy/v1
 kind: Applications
 spec:
-- name: !format Applications/tutorial-k8s/%version%
+- name: !format Applications/tutorial-helm/%version%
   type: udm.DeploymentPackage
   satisfiesOkTestManager: true
   satisfiesOkReleaseManager: true
   deployables:
-  - name: container
-    type: uccm.ContainerSpec
-    image: !format lyhsoft/tutorial:%version%
-    replicas: "{{ replicas }}"
-    env:
-      connection-string: "{{ connection-string }}"
-      user-bdd: "{{ user-bdd }}"
-    ports:
-    - name: port
-      type: uccm.ContainerPortSpec
-      containerPort: 1234
-      servicePort: 80
-      exposeAsIngress: true
-    progressive: true
+  - name: tutorial-helm
+    type: helm.Chart
+    chartName: bitnami/tomcat
+    chartVersion: 6.3.11
+    inputVariables:
+      hostAliases: "{{ hostAliases }}"
+      appVersion: 1.0.0
+    secretInputVariables:
+      tomcatPassword: "{{ tomcatPassword }}"
