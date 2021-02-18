@@ -5,12 +5,12 @@
 apiVersion: xl-deploy/v1
 kind: Applications
 spec:
-- name: Applications/tutorial-helm
+- name: Applications/tutorial
   type: udm.Application
-- name: !format Applications/tutorial-helm/%version%
+- name: !format Applications/tutorial/%version%
   type: udm.DeploymentPackage
   deployables:
-  - name: tutorial-helm
+  - name: chart
     type: helm.Chart
     chartName: bitnami/tomcat
     chartVersion: 6.3.11
