@@ -19,3 +19,4 @@ spec:
       appVersion: !value version
     secretInputVariables:
       tomcatPassword: "{{ tomcatPassword }}"
+    testRelease: False
