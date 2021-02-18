@@ -12,8 +12,8 @@ spec:
   deployables:
   - name: chart
     type: helm.Chart
-    chartName: bitnami/tomcat
-    chartVersion: 6.3.11
+    chartName: helm-charts/tutorial
+    chartVersion: 1.0.0
     inputVariables:
       hostAliases: "{{ hostAliases }}"
       appVersion: !value version
