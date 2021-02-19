@@ -20,3 +20,9 @@ spec:
     secretInputVariables:
       tomcatPassword: "{{ tomcatPassword }}"
     testRelease: False
+---
+apiVersion: xl-deploy/v1
+kind: Deployment
+spec:
+  package: !format Applications/tutorial/%version%
+  environment: Environments/openshift-dev
