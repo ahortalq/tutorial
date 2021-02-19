@@ -20,3 +20,13 @@ spec:
     secretInputVariables:
       tomcatPassword: "{{ tomcatPassword }}"
     testRelease: False
+---
+apiVersion: xl-deploy/v1
+kind: Environments
+spec:
+- name: Environments/tutorial-dev
+  type: udm.Dictionary
+  entries:
+    hostAliases: development
+  encryptedEntries:
+    tomcatPassword: nueva
