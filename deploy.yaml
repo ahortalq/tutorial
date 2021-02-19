@@ -30,3 +30,9 @@ spec:
     hostAliases: development
   encryptedEntries:
     tomcatPassword: nueva
+---
+apiVersion: xl-deploy/v1
+kind: Deployment
+spec:
+  package: !format Applications/tutorial/%version%
+  environment: Environments/openshift-dev
